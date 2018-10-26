@@ -1,0 +1,29 @@
+{
+  "name": "Sprint-ML2",
+  "version": "1.0.0",
+  "description": "Setup2 for ML sprint",
+  "author": "hamishmcdougall",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss node_modules/bulma/css/bulma.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0",
+    "express": "^4.16.3",
+    "@nuxtjs/bulma": "^1.2.0",
+    "@nuxtjs/axios": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.11.0",
+    "prettier": "1.14.3"
+  }
+}
